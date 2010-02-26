@@ -47,7 +47,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\..\testngpp\3rdparty;..\..\..\include;..\..\..\testngpp\include"
+				AdditionalIncludeDirectories="&quot;$(SolutionDir)..\..\include&quot;;&quot;$(SolutionDir)..\..\testngpp\3rdparty&quot;;&quot;$(SolutionDir)..\..\testngpp\include&quot;"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;MYPROJECTTEST_EXPORTS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -69,7 +69,7 @@
 				Name="VCLinkerTool"
 				AdditionalDependencies="testngpp.lib"
 				LinkIncremental="2"
-				AdditionalLibraryDirectories="..\..\..\testngpp\lib"
+				AdditionalLibraryDirectories="&quot;$(SolutionDir)..\..\testngpp\lib&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="2"
 				TargetMachine="1"
