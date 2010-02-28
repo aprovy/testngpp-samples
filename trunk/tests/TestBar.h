@@ -1,7 +1,10 @@
 
 #include <testngpp/testngpp.hpp>
+#include <mockcpp/mokc.h>
 
 #include <CBar.h>
+
+USING_MOCKCPP_NS
 
 FIXTURE(CBar)
 {
@@ -19,5 +22,21 @@ FIXTURE(CBar)
 	TEST(if devident is 0 => throw exception)
 	{
 		WARN("not implemented yet");
+	}
+
+	TEST(test devide by 0 with mock)
+	{
+		Except ex;
+		MOCKER(CBar::divide).stubs().with(any(), eq(0)).will(throws(ex));
+		
+		__DO__
+
+		ASSERT_THROWS(CBar::divide(1,0), Except);
+
+		__CLEANUP__
+
+		GlobalMockObject::reset();
+
+		__DONE__
 	}
 };
