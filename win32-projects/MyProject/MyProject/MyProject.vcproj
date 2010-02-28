@@ -40,9 +40,10 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
+				AdditionalOptions="/vmg"
 				Optimization="0"
 				AdditionalIncludeDirectories="..\..\..\include"
-				PreprocessorDefinitions="WIN32;_DEBUG;_LIB"
+				PreprocessorDefinitions="WIN32;_DEBUG;_LIB;MSVC_VMG_ENABLED"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -169,6 +170,10 @@
 			</File>
 			<File
 				RelativePath="..\..\..\include\CFoo.h"
+				>
+			</File>
+			<File
+				RelativePath="..\..\..\include\Interface.h"
 				>
 			</File>
 		</Filter>

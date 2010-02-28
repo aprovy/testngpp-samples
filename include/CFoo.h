@@ -1,10 +1,16 @@
 #ifndef __CFOO_H__
 #define __CFOO_H__
 
+struct Interface;
+
 struct CFoo
 {
-	static int add(int lhs, int rhs);
-	static int sub(int lhs, int rhs);
+	CFoo(Interface* iiface) : iface(iiface) {}
+
+	int add(int lhs, int rhs);
+	int sub(int lhs, int rhs);
+private:
+	Interface* iface;
 };
 
 #endif
