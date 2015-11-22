@@ -1,0 +1,1 @@
+The project shows how to use testngpp with MSVC.
